@@ -304,6 +304,73 @@ main {
 }
 
 /*
+    ============================================
+            Quote/Testimonial section
+    ============================================
+*/
+
+.quote {
+    background: var(--text-muted);
+    padding-block: clamp(40px, 8vw, 96px);
+    user-select: none;
+}
+
+.quote-inner {
+    width: 70%;
+}
+
+@media (max-width: 991px) {
+    .quote-inner {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .quote-inner {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .quote-inner {
+        width: 100%;
+    }
+}
+
+.quote-text {
+    /* strong contrast on light bg */
+    color: var(--bg-dark);
+    font-style: italic;
+    font-weight: 200;
+    line-height: 1.4;
+    font-size: clamp(22px, 2.2vw + 1rem, 36px);
+    /* big, fluid type */
+    quotes: "“" "”" "‘" "’";
+}
+
+.quote-text p, .quote-figure {
+    margin: 0;
+}
+
+.quote-author {
+    margin-top: 12px;
+    /* author on the right */
+    text-align: right;
+    color: var(--bg-dark);
+    font-size: 17px;
+    /* not italic per spec */
+    font-weight: 700;
+    line-height: 1.2;
+    width: 92%;
+}
+
+@media (max-width: 480px) {
+    .quote-author {
+        margin-top: 10px;
+    }
+}
+
+/*
     ====================================================
             Call to action section releated code                                                  
     ====================================================
@@ -324,6 +391,12 @@ main {
     padding: 36px 136px 36px 136px;
     flex-wrap: wrap;
     user-select: none;
+}
+
+@media (max-width: 1400px) {
+    .cta-inner {
+        width: 90%;
+    }
 }
 
 .cta-title {
@@ -461,7 +534,6 @@ footer {
 .footer-inner .nav-link:focus-visible {
     outline: 3px solid var(--keyboard-navigation);
     outline-offset: 2px;
-    /* optional: also underline on focus for consistency */
     text-decoration-line: underline;
 }
 
