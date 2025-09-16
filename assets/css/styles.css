@@ -30,6 +30,12 @@
     --bg-nav-link: #374151;
     /* centered content max width (~1152px) */
     --container: 72rem;
+    /* adjust to your actual header height (navbar) */
+    --header-height: 68px;
+}
+
+html {
+    scroll-padding-top: var(--header-height);
 }
 
 /* Base type + reset margin */
@@ -57,6 +63,9 @@ body {
 /* Full-width header bar; actual content is centered via .container */
 header {
     background: var(--bg-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* Header row: logo + nav. Wrap so nav drops under logo on small screens */
@@ -68,6 +77,7 @@ header {
     flex-wrap: wrap;
     /* vertical and horizontal breathing room */
     padding-block: 12px;
+    user-select: none;
 }
 
 /* Logo typographic hierarchy */
@@ -75,6 +85,27 @@ header {
     font-size: 24px;
     font-weight: 700;
     color: var(--text-light);
+}
+
+.site-title {
+    /* remove default h1 margins */
+    margin: 0;   
+    /* use .header-logo font-size/weight */              
+    font: inherit;
+    /* tighter lockup with the navbar */             
+    line-height: 1;            
+}
+
+.site-title .header-link {
+    /* uses var(--text-light) from header */
+    color: inherit;           
+    text-decoration: none;
+    /* enables padding + focus outline */
+    display: inline-block; 
+    /* small tap/focus area without shifting layout */    
+    padding: 4px 6px;      
+    /* matches your nav link radius */    
+    border-radius: 6px;        
 }
 
 /* Nav container: full width under logo by default (mobile-first) */
@@ -116,11 +147,6 @@ header {
     line-height: 1;
     /* smooth hover */
     transition: background-color .11s ease, color .11s ease;
-}
-
-.header-link {
-    text-decoration: none;
-    color: var(--text-light);
 }
 
 @media (max-width: 767px) {
@@ -200,12 +226,15 @@ header {
     /* comfortable tap target */
     border-radius: 6px;
     color: var(--text-light);
+    background-color: var(--bg-dark);
     cursor: pointer;
     transition: background-color .11s ease, color .11s ease;
 }
 
-.burger:hover {
-    background: var(--bg-nav-link);
+@media (hover: hover) and (pointer: fine) {
+    .burger:hover {
+        background-color: var(--bg-nav-link); 
+    }
 }
 
 /* Visible keyboard focus ring for accessibility (shows when navigating using TAB key on your keyboard) */
@@ -257,12 +286,201 @@ header {
 }
 
 /*
-    ============================================================================
-            Website content (main, hero-section, section) releated code                          
-    ============================================================================
+    =============================================================================================================
+            Website content (main, hero-section, content-area, quote/testimonial-section) releated code                                   
+    =============================================================================================================
 */
 
 /* Vertical padding for main content area */
 main {
     padding-block: 32px;
+}
+
+/*
+    ====================================================
+            Call to action section releated code                                                  
+    ====================================================
+*/
+
+.cta {
+    color: var(--text-light);
+    padding-block: clamp(24px, 6vw, 48px);
+}
+
+.cta-inner {
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px 24px;
+    padding: 36px 136px 36px 136px;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+.cta-title {
+    margin: 0 0 6px 0;
+    line-height: 1.2;
+    font-size: clamp(22px, 2vw + 1rem, 32px);
+    color: var(--text-light);
+}
+
+.cta-text {
+    margin: 0;
+    color: var(--text-light);
+    font-weight: 350;
+}
+
+.cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 12px;
+}
+
+
+/*
+    =====================================
+            Button releated code                                                  
+    =====================================
+*/
+
+.btn {
+    display: inline-block;
+    padding: 10px 36px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1;
+    user-select: none;
+    transition: background-color .12s ease, color .12s ease, border-color .12s ease;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--keyboard-navigation);
+    outline-offset: 2px;
+}
+
+/* Outline–primary (default for neutral backgrounds) */
+.btn-outline-primary {
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+/* On an accent (blue) CTA background, invert for contrast */
+.cta .btn-outline-primary {
+    color: var(--text-light);
+    border-color: var(--text-light);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .cta .btn-outline-primary:hover {
+        background: var(--text-light);
+        border-color: var(--text-light);
+        color: var(--accent);
+    }
+}
+
+/* Mobile: stack and make the button full-width */
+@media (max-width: 890px) {
+    .cta-inner {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 24px 72px 24px 72px;
+    }
+
+    .cta-title, .cta-text, .btn {
+        text-align: center;
+    }
+
+    .cta-actions {
+        justify-content: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+/*
+    ====================================
+            Footer releated code                                          
+    ====================================
+*/
+
+/* Footer bar in same palette as header */
+footer {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    padding-block: 20px;
+}
+
+/* Layout: nav + legal line, wrap on small screens */
+.footer-inner {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+    user-select: none;
+}
+
+/* Reuse nav-list, just tweak spacing/size for footer */
+.footer-nav .nav-list {
+    gap: 6px 12px;
+}
+
+.footer-nav .nav-link {
+    /* slightly smaller than header */
+    font-size: 16px;
+    /* a bit tighter */
+    padding: 6px 10px;
+}
+
+/* Base footer link appearance (no pill bg, light text on dark footer) */
+.footer-inner .nav-link, .footer-inner .nav-link[aria-current="page"] {
+    background: var(--bg-dark);
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+/* Hover + current: show underline (place AFTER base so it wins) */
+.footer-inner .nav-link:hover, .footer-inner .nav-link[aria-current="page"]:hover {
+    text-decoration-line: underline;
+}
+
+/* Keyboard focus: keep a visible indicator in the footer */
+.footer-inner .nav-link:focus-visible {
+    outline: 3px solid var(--keyboard-navigation);
+    outline-offset: 2px;
+    /* optional: also underline on focus for consistency */
+    text-decoration-line: underline;
+}
+
+/* Center stack on mobile */
+@media (max-width: 1072px) {
+    .footer-inner {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-nav .nav-list {
+        flex-direction: column;
+        align-items: stretch; 
+    }
+
+    .footer-nav .nav-link {     
+        width: 100%;   
+        text-align: center;
+        margin-block: 2px;
+        padding-block: 9px;
+        min-height: 38px;
+    }
+
+    .legal {
+        width: 100%;
+        margin-block: 8px;
+        opacity: 0.9;
+    }
 }
