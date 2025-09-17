@@ -305,6 +305,34 @@ main {
 
 /*
     ============================================
+            hero-section
+    ============================================
+*/
+
+.hero-section{
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 100px 0;
+}
+
+.container-hero-inner{
+    /*
+    max-width: 
+    margin:
+    padding:
+    */
+
+    /* Flexbox for side-by-side layout */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+
+
+/*
+    ============================================
             Quote/Testimonial section
     ============================================
 */
