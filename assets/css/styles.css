@@ -329,13 +329,31 @@ main {
     gap: 50px;
 }
 
+.hero-text {
+    flex:1;
+}
+
 .hero-text h1{
     font-size: 48px;
     font-weight: 900;
 }
 
+.hero-text p {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin: 10px 0 20px;
+}
 
+.hero-image {
+    flex: 1;
+    background-color: gray;
+    height: 240px;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+}
 /*
     ============================================
             Quote/Testimonial section
