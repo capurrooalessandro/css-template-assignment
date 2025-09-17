@@ -298,6 +298,41 @@ header {
     =============================================================================================================
 */
 
+/*
+    =====================================
+            Button releated code                                                  
+    =====================================
+*/
+
+.btn {
+    display: inline-block;
+    padding: 10px 36px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 1;
+    transition: background-color .12s ease, color .12s ease, border-color .12s ease;
+}
+
+.btn:focus-visible {
+    outline: 3px solid var(--keyboard-navigation);
+    outline-offset: 2px;
+}
+
+/* Outline–primary (default for neutral backgrounds) */
+.btn-outline-primary {
+    color: var(--accent);
+    background: var(--text-light);
+    border: 2px solid var(--accent);
+}
+
+/* On an accent (blue) CTA background, invert for contrast */
+.cta .btn-outline-primary {
+    color: var(--text-light);
+    background-color: var(--accent);
+    border-color: var(--text-light);
+}
+
 /* Vertical padding for main content area */
 main {
     padding-block: 32px;
@@ -521,42 +556,6 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 10px 12px;
-}
-
-
-/*
-    =====================================
-            Button releated code                                                  
-    =====================================
-*/
-
-.btn {
-    display: inline-block;
-    padding: 10px 36px;
-    border-radius: 8px;
-    font-weight: 600;
-    text-decoration: none;
-    line-height: 1;
-    transition: background-color .12s ease, color .12s ease, border-color .12s ease;
-}
-
-.btn:focus-visible {
-    outline: 3px solid var(--keyboard-navigation);
-    outline-offset: 2px;
-}
-
-/* Outline–primary (default for neutral backgrounds) */
-.btn-outline-primary {
-    color: var(--accent);
-    background: var(--text-light);
-    border: 2px solid var(--accent);
-}
-
-/* On an accent (blue) CTA background, invert for contrast */
-.cta .btn-outline-primary {
-    color: var(--text-light);
-    background-color: var(--accent);
-    border-color: var(--text-light);
 }
 
 @media (hover: hover) and (pointer: fine) {
