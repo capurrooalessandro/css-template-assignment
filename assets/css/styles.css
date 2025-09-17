@@ -336,18 +336,19 @@ main {
 .hero-text h1{
     font-size: 48px;
     font-weight: 900;
+    margin: 0;
 }
 
 .hero-text p {
     font-size: 18px;
     color: var(--text-muted);
-    margin: 10px 0 20px;
+    margin: 0 0 20px;
 }
 
 .hero-image {
     flex: 1;
     background-color: gray;
-    height: 240px;
+    height: 300px;
 
     display: flex;
     align-items: center;
@@ -364,6 +365,8 @@ main {
     border-radius: 8px;
     padding: 10px 36px;
     cursor: pointer;
+    user-select: none;
+    text-decoration: none;
 }
 /*
     ============================================
