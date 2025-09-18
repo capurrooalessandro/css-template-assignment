@@ -28,6 +28,10 @@
     --keyboard-navigation: #93c5fd;
     /* used for hover/active in the nav links */
     --bg-nav-link: #374151;
+    /* used for image placeholder on hero section */
+    --bg-image-placeholder: #6D747D;
+    /* used for the text in the information box */
+    --text-infobox: var(--bg-image-placeholder);
     /* centered content max width (~1152px) */
     --container: 72rem;
     /* adjust to your actual header height (navbar) */
@@ -294,7 +298,7 @@ header {
 
 /*
     =============================================================================================================
-            Website content (main, hero-section, content-area, quote/testimonial-section) releated code                                   
+                                            Website content releated code                                   
     =============================================================================================================
 */
 
@@ -312,6 +316,21 @@ header {
     text-decoration: none;
     line-height: 1;
     transition: background-color .12s ease, color .12s ease, border-color .12s ease;
+}
+
+/* Primary button (using .btn base) */
+.btn-primary {
+    color: var(--text-light);
+    background: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btn-primary:hover {
+        color: var(--accent);
+        background: transparent;
+        border-color: var(--accent);
+    }
 }
 
 .btn:focus-visible {
@@ -333,91 +352,96 @@ header {
     border-color: var(--text-light);
 }
 
-/* Vertical padding for main content area */
-main {
-    padding-block: 32px;
-}
-
 /*
     ============================================
             hero-section
     ============================================
 */
 
-.hero-section{
+.hero-section {
     background-color: var(--bg-dark);
     color: var(--text-light);
-    padding: 100px 0;
+    padding-block: 100px;
 }
 
-.container-hero-inner{
-    
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 20px;
-    
-
-    /* Flexbox for side-by-side layout */
+.hero-inner {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 50px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.hero-title {
+    line-height: 1.2;
+    font-size: clamp(24px, 2vw + 1rem, 48px);
+    font-weight: 900;
+    margin: 0 0 7px 0;
+    /* prefer readable line length over fixed % width */
+    max-width: 18ch;
 }
 
 .hero-text {
-    flex:1;
-}
-
-.hero-text h1{
-    font-size: 48px;
-    font-weight: 900;
-    margin: 0;
-}
-
-.hero-text p {
-    font-size: 18px;
+    font-size: clamp(14px, 0.9rem + 0.6vw, 18px);
     color: var(--text-muted);
+    line-height: 1.6;
     margin: 0 0 20px;
+    max-width: 46ch;
 }
 
 .hero-image {
+    background-color: var(--bg-image-placeholder);
+    /* keep your other properties */
     flex: 1;
-    background-color: gray;
-    height: 300px;
-
+    height: 250px;
+    max-width: 42%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
-}
-
-.signup-button {
-    background-color: var(--accent);
-    color: var(--text-light);
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
     border-radius: 8px;
-    padding: 10px 36px;
-    cursor: pointer;
-    user-select: none;
-    text-decoration: none;
 }
 
-/*
-    ============================================
-            Random information section
-    ============================================
-*/
+/* Mobile adjustments */
+@media (max-width: 991px) {
+    .hero-inner {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-title, .hero-text {
+        /* center text blocks */
+        max-width: none;
+    }
+
+    .hero-inner .btn {
+        width: 100%;
+        /* big but not silly-wide on tablets */
+        max-width: 420px;
+        margin-inline: auto;
+    }
+
+    .hero-image {
+        align-self: center;
+        /* fill most of the screen width but cap it */
+        width: 400px;
+        max-width: 100%;
+        min-height: 210px;
+        max-height: 75vh;
+    }
+}
+
 .info-section {
-    padding: 50px 0 100px;
+    padding-block: 75px;
     text-align: center;
 }
 
-.info-section h2{
+.info-section h2 {
     font-size: 36px;
-    font-weight:900;
-    color:var(--bg-dark);
+    font-weight: 900;
+    color: var(--bg-dark);
     margin-bottom: 50px;
 }
 
@@ -432,6 +456,16 @@ main {
     width: 160px;
 }
 
+/* Info section fixes */
+.info-text {
+    font-size: 14px;
+    /* readable on white background */
+    color: var(--text-infobox);
+    line-height: 1.4;
+    text-align: center;
+    word-spacing: 1.3px;
+}
+
 .info-box {
     width: 160px;
     height: 160px;
@@ -440,11 +474,28 @@ main {
     margin-bottom: 8px;
 }
 
-.info-text {
-    font-size: 14px;
-    color: gray;
-    text-align: center;
+
+@media (max-width: 991px) {
+    .info-container {
+        display: grid;
+        grid-template-columns: repeat(2, 160px);
+        justify-content: center;
+        gap: 50px;
+    }
+
+    /* let grid control width — avoid fixed width on the item */
+    .info-item {
+        width: auto;
+    }
 }
+
+@media (max-width: 576px) {
+    .info-container {
+        grid-template-columns: 160px;
+    }
+}
+
+
 /*
     ============================================
             Quote/Testimonial section
@@ -587,7 +638,7 @@ main {
         justify-content: center;
     }
 
-    .btn {
+    .cta .btn {
         width: 100%;
     }
 }
@@ -678,6 +729,10 @@ footer {
             Contact page related code
     ============================================
 */
+
+.contact {
+    padding-block: 32px;
+}
 
 .contact-header {
     margin-bottom: clamp(16px, 3vw, 28px);
