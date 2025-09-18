@@ -919,6 +919,56 @@ footer {
 
 /*
     ============================================
+            Sign up page related code
+    ============================================
+*/
+
+.signup-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+/* supporting bits */
+
+.signup-benefits {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    color: var(--bg-dark);
+}
+
+.inline-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.inline-link:hover, .inline-link:focus {
+    text-decoration: underline;
+}
+
+.form-hint {
+    margin: 4px 0 0 0;
+    font-size: 0.95rem;
+    color: var(--bg-image-placeholder);
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: var(--bg-dark);
+}
+
+.checkbox input {
+    margin-top: 3px;
+}
+
+/*
+    ============================================
             Contact page related code
     ============================================
 */
@@ -1075,54 +1125,4 @@ textarea  {
 
 .contact-hours li:last-child {
     border-bottom: none;
-}
-
-/*
-    ============================================
-            Sign up page related code
-    ============================================
-*/
-
-.signup-grid {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-}
-
-/* supporting bits */
-
-.signup-benefits {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 10px;
-    color: var(--bg-dark);
-}
-
-.inline-link {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-.inline-link:hover, .inline-link:focus {
-    text-decoration: underline;
-}
-
-.form-hint {
-    margin: 4px 0 0 0;
-    font-size: 0.95rem;
-    color: var(--bg-image-placeholder);
-}
-
-.checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    color: var(--bg-dark);
-}
-
-.checkbox input {
-    margin-top: 3px;
 }
