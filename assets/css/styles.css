@@ -948,7 +948,7 @@ footer {
     color: var(--text-muted);
 }
 
-.contact-grid, .signup-grid {
+.contact-grid {
     display: grid;
     gap: 20px;
     /* form wider than info */
@@ -1082,6 +1082,15 @@ textarea  {
             Sign up page related code
     ============================================
 */
+
+.signup-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+/* supporting bits */
 
 .signup-benefits {
     list-style: none;
