@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A description.">
+    <!--link tags containing fontawesome stylesheets for icons and our custom styles.css file-->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <title>Home (CSS Responsive Template)</title>
+</head>
+
+<body>
+    <header>
+        <!--Header section containing the Navigation bar and burger mode-->
+        <div class="container header-inner">
+            <div class="header-logo">
+                <!-- Make this your <h1> or keep <h1> in main; but ensure one exists on the page -->
+                <h1 class="site-title">
+                    <a class="header-link" href="./index.html">Header logo</a>
+                </h1>
+            </div>
+            <!--Burger mode code (checkbox hidden through CSS)-->
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"
+                aria-controls="primary-navigation">
+            <label for="nav-toggle" class="burger">
+                <!--sr-only is for screen readers only for accessibility purposes-->
+                <span class="sr-only">Menu</span>
+                <i class="fa-solid fa-bars icon icon--open" aria-hidden="true"></i>
+                <i class="fa-solid fa-xmark icon icon--close" aria-hidden="true"></i>
+            </label>
+            <!--Navbar start (aria-label is used for screen readers to specify that this is the main navbar)-->    
+            <nav class="navbar" id="primary-navigation" aria-label="Primary">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <!--aria-current is used also to highlight the active page in CSS-->
+                        <a class="nav-link" href="./index.html" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/about-us.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/link-one.html">Link one</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/sign-up.html">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/contacts.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!--End of navbar-->
+    </header>
+
+    <main>
+        <!--about section-->
+        <section class="about-hero">
+            <div class="container about"> 
+                <h1>We believe in making things awesome, together.</h1>
+                <p>[Your company's core mission statement or belief goes here. Keep it concise and inspiring.]</p>
+            </div>
+        </section>
+
+        <!--origin section-->
+        <section class="origin-story">
+            <div class="container origin">
+                <div class="story-text">
+                    <h2>Our Story</h2>
+                    <p>[Placeholder for the company's origin story.]</p>
+                    <p>[add another paragraph here to elaborate on your journey or key milestones.]</p>
+                </div>
+                <div class="story-image">
+                    <p>[Placeholder for a photo of the founder(s)]</p>
+                </div>
+            </div>
+        </section>
+
+        <!--services section-->
+        <section class="services-section">
+            <h2>What We Do</h2> 
+            <div class="services-container">
+                
+                <div class="service-item">
+                    <div class="service-box"></div>
+                    <h3>Service Name</h3>
+                    <p class="service-text">
+                        this is some subtext under an illustration or image
+                    </p>
+                </div>
+        
+                <div class="service-item">
+                    <div class="service-box"></div>
+                    <h3>Service Name</h3>
+                    <p class="service-text">
+                        this is some subtext under an illustration or image
+                    </p>
+                </div>
+        
+                <div class="service-item">
+                    <div class="service-box"></div>
+                    <h3>Service Name</h3>
+                    <p class="service-text">
+                        this is some subtext under an illustration or image
+                    </p>
+                </div>
+        
+                <div class="service-item">
+                    <div class="service-box"></div>
+                    <h3>Service Name</h3>
+                    <p class="service-text">
+                        this is some subtext under an illustration or image
+                    </p>
+                </div>
+        </section>
+
+        <!--values section-->
+        <section class="values-section">
+            <h2>Our Values</h2> 
+            <div class="values-container">
+                <div class="value-item">
+                    <div class="icon-placeholder"></div>
+                    <h3>Integrity</h3>
+                    <p>[Short description of what this value means to your company.]</p>
+                </div>
+                <div class="value-item">
+                    <div class="icon-placeholder"></div>
+                    <h3>Innovation</h3>
+                    <p>[Short description of what this value means to your company.]</p>
+                </div>
+                <div class="value-item">
+                    <div class="icon-placeholder"></div>
+                    <h3>Community</h3>
+                    <p>[Short description of what this value means to your company.]</p>
+                </div>
+            </div>
+        </section>
+
+        <!--team section-->
+        <section class="team-section">
+            <h2>Meet the Team</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <div class="team-photo-placeholder"></div>
+                    <h3>[Team Member Name]</h3>
+                    <p>[Role or Title]</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo-placeholder"></div>
+                    <h3>[Team Member Name]</h3>
+                    <p>[Role or Title]</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo-placeholder"></div>
+                    <h3>[Team Member Name]</h3>
+                    <p>[Role or Title]</p>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo-placeholder"></div>
+                    <h3>[Team Member Name]</h3>
+                    <p>[Role or Title]</p>
+                </div>
+            </div>
+        </section>
+       
+
+        <!-- Full-width CTA band with inner container -->
+        <section class="cta" aria-labelledby="cta-title">
+            <div class="container cta-inner">
+                <div class="cta-copy">
+                    <h2 id="cta-title" class="cta-title">Call to action? It's time!</h2>
+                    <p class="cta-text">
+                        Sign up for our product by clicking that button right over there!
+                    </p>
+                </div>
+                <div class="cta-actions">
+                    <a class="btn btn-outline-primary" href="./pages/sign-up.html">Sign up</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <!--Start of footer section (also containing a navigation bar for SEO and accessibility)-->
+        <div class="container footer-inner">
+            <nav class="footer-nav" aria-label="Footer">
+                <ul class="nav-list footer-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/about-us.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/link-one.html">Link one</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/sign-up.html">Sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/contacts.html">Contact</a>
+                    </li>
+                    <!-- add any utility links here: Privacy, Terms, Sitemap, etc. -->
+                </ul>
+            </nav>
+
+            <p class="legal">
+                Copyright
+                &copy; 
+                <time datetime="2025">2025</time> 
+                Capurro Alessandro/Nyeleti Sithole. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
