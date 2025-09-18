@@ -47,7 +47,6 @@ body {
     margin: 0;
     font-family: "Roboto", system-ui, -apple-system, Arial, sans-serif;
     line-height: 1.6;
-    user-select: none;
 }
 
 /* Center inner content and add responsive side padding */
@@ -836,7 +835,6 @@ footer {
 /* Values Section */
 .values-section {
     padding: 100px 0;
-    background-color: #FFF; /* Set to white for contrast */
 }
 
 .values-section h2 {
@@ -1018,7 +1016,6 @@ footer {
     border: 1px solid var(--text-muted);
     border-radius: 8px;
     padding: clamp(16px, 3vw, 24px);
-    user-select: text;
 }
 
 /* -------- Form ------- */
@@ -1039,7 +1036,6 @@ footer {
 .form-field {
     display: grid;
     gap: 6px;
-    user-select: none;
 }
 
 .form-label {
