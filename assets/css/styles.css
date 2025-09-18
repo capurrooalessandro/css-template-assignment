@@ -726,6 +726,199 @@ footer {
 
 /*
     ============================================
+            About Us page related code
+    ============================================
+*/
+.about-hero {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.about-hero p {
+    font-size: 18px;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 16px auto 0;
+}
+
+/* Origin Story Section */
+.origin-story {
+    padding: 100px 0;
+    background-color: var(--text-muted);
+}
+
+.origin-story .origin {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.story-text {
+    flex: 1;
+}
+
+.story-text h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--bg-dark);
+    margin-top: 0;
+}
+
+.story-image {
+    flex: 1;
+    height: 300px;
+    background-color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-image-placeholder);
+    border-radius: 8px;
+}
+
+/* Services Section */
+.services-section {
+    padding: 100px 0;
+    background-color: var(--text-muted);
+}
+
+.services-section h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--bg-dark);
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.service-item {
+    background-color: #FFF;
+    width: 300px;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 8px;
+    /*
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    */
+}
+
+/*
+.service-item:hover {
+    transform: translateY(-10px);
+} */
+
+.service-box {
+    height: 60px;
+    width: 60px;
+    background-color: var(--accent);
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+
+.service-item h3 {
+    color: var(--bg-dark);
+    margin-bottom: 10px;
+}
+
+/* Values Section */
+.values-section {
+    padding: 100px 0;
+    background-color: #FFF; /* Set to white for contrast */
+}
+
+.values-section h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--bg-dark);
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.values-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.value-item {
+    width: 220px;
+    text-align: center;
+}
+
+.icon-placeholder {
+    height: 80px;
+    width: 80px;
+    border: 3px solid var(--accent);
+    border-radius: 50%;
+    margin: 0 auto 16px;
+}
+
+.value-item h3 {
+    color: var(--bg-dark);
+    margin-bottom: 8px;
+}
+
+/* Team Section */
+.team-section {
+    padding: 100px 0;
+    background-color: var(--text-muted);
+}
+
+.team-section h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: var(--bg-dark);
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 200px;
+    text-align: center;
+}
+
+.team-photo-placeholder {
+    width: 150px;
+    height: 150px;
+    background-color: var(--bg-image-placeholder);
+    border-radius: 50%;
+    margin: 0 auto 16px;
+}
+
+.team-member h3 {
+    margin: 0;
+    color: var(--bg-dark);
+}
+
+.team-member p {
+    margin: 4px 0 0;
+    color: var(--accent);
+}
+
+/*
+    ============================================
             Contact page related code
     ============================================
 */
