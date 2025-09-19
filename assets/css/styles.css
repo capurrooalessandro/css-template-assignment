@@ -47,7 +47,6 @@ body {
     margin: 0;
     font-family: "Roboto", system-ui, -apple-system, Arial, sans-serif;
     line-height: 1.6;
-    user-select: none;
 }
 
 /* Center inner content and add responsive side padding */
@@ -91,34 +90,6 @@ header {
     color: var(--text-light);
 }
 
-.site-title {
-    /* remove default h1 margins */
-    margin: 0;   
-    /* use .header-logo font-size/weight */              
-    font: inherit;
-    /* tighter lockup with the navbar */             
-    line-height: 1;            
-}
-
-.site-title .header-link {
-    /* uses var(--text-light) from header */
-    color: inherit;           
-    text-decoration: none;
-    /* enables padding + focus outline */
-    display: inline-block; 
-    /* small tap/focus area without shifting layout */    
-    padding: 4px 6px;      
-    /* matches your nav link radius */    
-    border-radius: 6px;        
-}
-
-.header-link:focus-visible {
-    outline: 3px solid var(--keyboard-navigation);
-    outline-offset: 2px;
-    border-radius: 6px;
-}
-
-
 /* Nav container: full width under logo by default (mobile-first) */
 .navbar {
     /* spacing when nav wraps below logo */
@@ -158,6 +129,7 @@ header {
     line-height: 1;
     /* smooth hover */
     transition: background-color .11s ease, color .11s ease;
+    user-select: none;
 }
 
 @media (max-width: 767px) {
@@ -316,6 +288,7 @@ header {
     text-decoration: none;
     line-height: 1;
     transition: background-color .12s ease, color .12s ease, border-color .12s ease;
+    user-select: none;
 }
 
 /* Primary button (using .btn base) */
@@ -885,6 +858,7 @@ footer {
 .values-section {
     padding-block: 75px;
     background-color: #FFF; /* Set to white for contrast */
+    padding: 100px 0;
 }
 
 .values-section h2 {
@@ -1022,6 +996,56 @@ footer {
 }
 /*
     ============================================
+            Sign up page related code
+    ============================================
+*/
+
+.signup-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+/* supporting bits */
+
+.signup-benefits {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 10px;
+    color: var(--bg-dark);
+}
+
+.inline-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.inline-link:hover, .inline-link:focus {
+    text-decoration: underline;
+}
+
+.form-hint {
+    margin: 4px 0 0 0;
+    font-size: 0.95rem;
+    color: var(--bg-image-placeholder);
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    color: var(--bg-dark);
+}
+
+.checkbox input {
+    margin-top: 3px;
+}
+
+/*
+    ============================================
             Contact page related code
     ============================================
 */
@@ -1070,7 +1094,6 @@ footer {
     border: 1px solid var(--text-muted);
     border-radius: 8px;
     padding: clamp(16px, 3vw, 24px);
-    user-select: text;
 }
 
 /* -------- Form ------- */
@@ -1091,7 +1114,6 @@ footer {
 .form-field {
     display: grid;
     gap: 6px;
-    user-select: none;
 }
 
 .form-label {
@@ -1178,54 +1200,4 @@ textarea  {
 
 .contact-hours li:last-child {
     border-bottom: none;
-}
-
-/*
-    ============================================
-            Sign up page related code
-    ============================================
-*/
-
-.signup-grid {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-}
-
-/* supporting bits */
-
-.signup-benefits {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 10px;
-    color: var(--bg-dark);
-}
-
-.inline-link {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-.inline-link:hover, .inline-link:focus {
-    text-decoration: underline;
-}
-
-.form-hint {
-    margin: 4px 0 0 0;
-    font-size: 0.95rem;
-    color: var(--bg-image-placeholder);
-}
-
-.checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    color: var(--bg-dark);
-}
-
-.checkbox input {
-    margin-top: 3px;
 }
