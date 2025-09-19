@@ -361,23 +361,17 @@ header {
     max-width: 46ch;
 }
 
-.hero-image {
+.hero-image img {
     background-color: var(--bg-image-placeholder);
     /* keep your other properties */
     flex: 1;
-    height: 250px;
-    max-width: 42%;
+    width: 46ch;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
     border-radius: 8px;
-}
-
-.hero-image img {
-    max-width: 100%;  /* Ensures the image is never wider than its container */
-    height: auto;     /* Maintains the image's aspect ratio */
-    border-radius: 8px; /* Adds nice rounded corners */
 }
 
 /* Mobile adjustments */
@@ -398,17 +392,14 @@ header {
     .hero-inner .btn {
         width: 100%;
         /* big but not silly-wide on tablets */
-        max-width: 420px;
+        max-width: 576px;
         margin-inline: auto;
     }
 
-    .hero-image {
-        align-self: center;
+    .hero-image img {
         /* fill most of the screen width but cap it */
-        width: 400px;
-        max-width: 100%;
-        min-height: 210px;
-        max-height: 75vh;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -432,7 +423,8 @@ header {
 }
 
 .info-item {
-    width: 160px;
+    width: 14.6rem;
+    margin: 0px 0px 0px 0px;
 }
 
 /* Info section fixes */
@@ -445,7 +437,7 @@ header {
     word-spacing: 1.3px;
 }
 
-.info-box {
+.info-box img {
     width: 160px;
     height: 160px;
     border: 4px solid var(--accent);
@@ -454,17 +446,15 @@ header {
 }
 
 
-@media (max-width: 991px) {
+@media (max-width: 1162px) {
     .info-inner {
         display: grid;
-        grid-template-columns: repeat(2, 160px);
-        justify-content: center;
-        gap: 50px;
+        grid-template-columns: 1fr;
     }
 
     /* let grid control width — avoid fixed width on the item */
     .info-item {
-        width: auto;
+        width: 100%;
     }
 }
 
@@ -602,7 +592,7 @@ header {
 }
 
 /* Mobile: stack and make the button full-width */
-@media (max-width: 991px) {
+@media (max-width: 1096px) {
     .cta-inner {
         flex-direction: column;
         align-items: stretch;
@@ -730,7 +720,6 @@ footer {
 /* Origin Story Section */
 .origin-story {
     padding: 100px 50px;
-    background-color: var(--text-muted);
 }
 
 .origin {
@@ -750,21 +739,22 @@ footer {
     margin-top: 0;
 }
 
-.story-image {
+.story-image img {
     flex: 1;
-    height: 300px;
     background-color: var(--bg-image-placeholder);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--text-muted);
     border-radius: 8px;
+    width: 52ch;
+    height: auto;
 }
 
 @media (max-width: 991px) {
     .origin {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
         justify-content: center;
         text-align: center;
         gap: 20px;
@@ -774,13 +764,10 @@ footer {
         max-width: none;
     }
 
-    .story-image {
-        align-self: center;
+    .story-image img {
         /* fill most of the screen width but cap it */
-        width: 400px;
-        max-width: 100%;
-        min-height: 210px;
-        max-height: 75vh;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -807,7 +794,6 @@ footer {
 }
 
 .service-item {
-    background-color: #FFF;
     width: 300px;
     padding-block: 40px;
     text-align: center;
@@ -817,8 +803,13 @@ footer {
     
 
 }
+
+.service-text {
+    width: 80%;
+    margin: auto;
+}
  
-.service-box {
+.service-box img {
     width: 160px;
     height: 160px;
     margin: 0 auto 20px;
@@ -834,31 +825,27 @@ footer {
     margin-bottom: 10px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1096px) {
     .services-inner{
         display: grid;
-        grid-template-columns: repeat(2, 300px);
-        justify-content: center;
-        gap: 50px;
+        grid-template-columns: 1fr;
     }
 
      /* let grid control width — avoid fixed width on the item */
-     .service-item {
-        width: auto;
+    .service-item {
+        width: 80%;
     }
 }
 
 @media (max-width: 576px) {
-    .services-inner {
-        grid-template-columns: 300px;
+    .service-item {
+        width: 90%;
     }
 }
 
 /* Values Section */
 .values-section {
     padding-block: 75px;
-    background-color: #FFF; /* Set to white for contrast */
-    padding: 100px 0;
 }
 
 .values-section h2 {
@@ -878,12 +865,11 @@ footer {
 }
 
 .value-item {
-    width: 160px;
+    width: 30%;
     text-align: center;
 }
 
-.icon-placeholder {
-
+.icon-placeholder img {
     width: 160px;
     height: 160px;
     border: 4px solid var(--accent);
@@ -908,12 +894,10 @@ footer {
     word-spacing: 1.3px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1096px) {
     .values-inner {
         display: grid;
-        grid-template-columns: repeat(2, 160px);
-        justify-content: center;
-        gap: 50px;
+        grid-template-columns: 1fr;
     }
 
     .value-item {
@@ -921,11 +905,6 @@ footer {
     }  
 }
 
-@media (max-width: 576px) {
-    .values-inner {
-        grid-template-columns: 160px;
-    }
-}
 
 /* Team Section */
 .team-section {
@@ -951,11 +930,10 @@ footer {
 }
 
 .team-member {
-    width: 160px;
-    text-align: center;
+    width: 22%;
 }
 
-.team-photo-placeholder {
+.team-photo-placeholder img {
     width: 160px;
     height: 160px;
     background-color: var(--bg-image-placeholder);
@@ -969,7 +947,7 @@ footer {
     color: var(--bg-dark);
 }
 
-.team-member p {
+.team-member figcaption {
     margin: 4px 0 0;
     color: var(--accent);
     text-align: center;
@@ -979,9 +957,7 @@ footer {
 @media (max-width: 991px) {
     .team-inner {
         display: grid;
-        grid-template-columns: repeat(2, 160px);
-        justify-content: center;
-        gap: 50px;
+        grid-template-columns: 1fr;
     }
 
     .team-member {
@@ -1052,7 +1028,7 @@ footer {
 
 .contact, .signup {
     padding-block: 32px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .contact-header, .signup-header {
