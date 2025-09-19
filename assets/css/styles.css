@@ -401,6 +401,12 @@ header {
     border-radius: 8px;
 }
 
+.hero-image img {
+    max-width: 100%;  /* Ensures the image is never wider than its container */
+    height: auto;     /* Maintains the image's aspect ratio */
+    border-radius: 8px; /* Adds nice rounded corners */
+}
+
 /* Mobile adjustments */
 @media (max-width: 991px) {
     .hero-inner {
@@ -445,7 +451,7 @@ header {
     margin-bottom: 50px;
 }
 
-.info-container {
+.info-inner {
     display: flex;
     justify-content: center;
     gap: 50px;
@@ -476,7 +482,7 @@ header {
 
 
 @media (max-width: 991px) {
-    .info-container {
+    .info-inner {
         display: grid;
         grid-template-columns: repeat(2, 160px);
         justify-content: center;
@@ -490,7 +496,7 @@ header {
 }
 
 @media (max-width: 576px) {
-    .info-container {
+    .info-inner {
         grid-template-columns: 160px;
     }
 }
@@ -750,11 +756,11 @@ footer {
 
 /* Origin Story Section */
 .origin-story {
-    padding: 100px 0;
+    padding: 100px 50px;
     background-color: var(--text-muted);
 }
 
-.origin-story .origin {
+.origin {
     display: flex;
     align-items: center;
     gap: 80px;
@@ -774,18 +780,42 @@ footer {
 .story-image {
     flex: 1;
     height: 300px;
-    background-color: var(--text-muted);
+    background-color: var(--bg-image-placeholder);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--bg-image-placeholder);
+    color: var(--text-muted);
     border-radius: 8px;
+}
+
+@media (max-width: 991px) {
+    .origin {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .story-text, .story-text h2{
+        max-width: none;
+    }
+
+    .story-image {
+        align-self: center;
+        /* fill most of the screen width but cap it */
+        width: 400px;
+        max-width: 100%;
+        min-height: 210px;
+        max-height: 75vh;
+    }
 }
 
 /* Services Section */
 .services-section {
-    padding: 100px 0;
+    padding-block: 75px;
     background-color: var(--text-muted);
+    text-align: center;
 }
 
 .services-section h2 {
@@ -793,39 +823,37 @@ footer {
     font-size: 36px;
     font-weight: 900;
     color: var(--bg-dark);
-    margin-top: 0;
     margin-bottom: 50px;
 }
 
-.services-container {
+.services-inner {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 .service-item {
     background-color: #FFF;
     width: 300px;
-    padding: 40px 20px;
+    padding-block: 40px;
     text-align: center;
     border-radius: 8px;
-    /*
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-    */
-}
-
-/*
-.service-item:hover {
-    transform: translateY(-10px);
-} */
-
-.service-box {
-    height: 60px;
-    width: 60px;
-    background-color: var(--accent);
     margin: 0 auto 20px;
-    border-radius: 50%;
+    flex-wrap: wrap;
+    
+
+}
+ 
+.service-box {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 20px;
+    color: var(--text-infobox);
+    border: 4px solid var(--accent);
+    border-radius: 15px;
+    margin-bottom: 8px;
+    background-color: var(--bg-image-placeholder);
 }
 
 .service-item h3 {
@@ -833,9 +861,29 @@ footer {
     margin-bottom: 10px;
 }
 
+@media (max-width: 991px) {
+    .services-inner{
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+        justify-content: center;
+        gap: 50px;
+    }
+
+     /* let grid control width — avoid fixed width on the item */
+     .service-item {
+        width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .services-inner {
+        grid-template-columns: 300px;
+    }
+}
+
 /* Values Section */
 .values-section {
-    padding: 100px 0;
+    padding-block: 75px;
     background-color: #FFF; /* Set to white for contrast */
 }
 
@@ -848,14 +896,15 @@ footer {
     margin-bottom: 50px;
 }
 
-.values-container {
+.values-inner {
     display: flex;
     justify-content: center;
     gap: 50px;
+    flex-wrap: wrap;
 }
 
 .value-item {
-    width: 220px;
+    width: 160px;
     text-align: center;
 }
 
@@ -864,6 +913,7 @@ footer {
     width: 160px;
     height: 160px;
     border: 4px solid var(--accent);
+    background-color: var(--bg-image-placeholder);
     border-radius: 15px;
     margin-bottom: 8px;
 }
@@ -871,12 +921,43 @@ footer {
 .value-item h3 {
     color: var(--bg-dark);
     margin-bottom: 8px;
+    
+}
+
+.value-item p {
+    font-size: 14px;
+    /* readable on white background */
+    color: var(--text-infobox);
+    
+    line-height: 1.4;
+    text-align: center;
+    word-spacing: 1.3px;
+}
+
+@media (max-width: 991px) {
+    .values-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 160px);
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .value-item {
+        width: auto;
+    }  
+}
+
+@media (max-width: 576px) {
+    .values-inner {
+        grid-template-columns: 160px;
+    }
 }
 
 /* Team Section */
 .team-section {
-    padding: 100px 0;
+    padding-block: 75px;
     background-color: var(--text-muted);
+    text-align: center;
 }
 
 .team-section h2 {
@@ -888,7 +969,7 @@ footer {
     margin-bottom: 50px;
 }
 
-.team-container {
+.team-inner {
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -896,16 +977,17 @@ footer {
 }
 
 .team-member {
-    width: 200px;
+    width: 160px;
     text-align: center;
 }
 
 .team-photo-placeholder {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     background-color: var(--bg-image-placeholder);
-    border-radius: 50%;
-    margin: 0 auto 16px;
+    border: 4px solid var(--accent);
+    border-radius: 15px;
+    margin-bottom: 8px;
 }
 
 .team-member h3 {
@@ -916,8 +998,28 @@ footer {
 .team-member p {
     margin: 4px 0 0;
     color: var(--accent);
+    text-align: center;
+    word-spacing: 1.3px;
 }
 
+@media (max-width: 991px) {
+    .team-inner {
+        display: grid;
+        grid-template-columns: repeat(2, 160px);
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .team-member {
+        width: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-inner {
+        grid-template-columns: 160px;
+    }
+}
 /*
     ============================================
             Contact page related code
