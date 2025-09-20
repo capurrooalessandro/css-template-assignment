@@ -666,7 +666,7 @@ footer {
 /* ================================
    Services
    Desktop: flex row (wrap)
-   Mobile: grid (1 column)
+   Mobile: flex column (1 column)
    ================================ */
 .services-section, .team-section {
     padding-block: 75px;
@@ -710,7 +710,7 @@ footer {
 /* ================================
    Values
    Desktop: flex row (wrap)
-   Mobile: grid (1 column)
+   Mobile: flex column (1 column)
    ================================ */
 
 .values-section {
@@ -770,11 +770,11 @@ footer {
     word-spacing: 1.3px;
 }
 
-/* mobile layout: grid */
+/* mobile layout: flex column */
 @media (max-width: 1192px) {
     .values-inner, .services-inner, .team-inner {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 40px;
     }
 
@@ -815,17 +815,10 @@ footer {
 }
 
 .contact-grid, .signup-grid{
-    display: grid;
+    display: flex;
     gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-}
-
-
-@media (max-width:991px) {
-    .contact-grid, .signup-grid {
-        grid-template-columns: 1fr;
-    }
+    align-items: center;
+    justify-content: center;
 }
 
 .signup-benefits {
@@ -833,30 +826,38 @@ footer {
 }
 
 .contact-card {
+    display: flex;
     background: var(--text-light);
     border: 1px solid var(--text-muted);
     border-radius: 8px;
+    flex-direction: column;
     padding: clamp(16px, 3vw, 24px);
+    width: 100%;
+    align-self: baseline;
 }
 
 /* Fields */
 .form-row {
-    display: grid;
     gap: 16px;
-    grid-template-columns: 1fr 1fr;
+    width: 100%;
     margin-bottom: 16px;
 }
 
-@media (max-width:768px) {
-    .form-row {
-        grid-template-columns: 1fr;
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+@media (max-width:991px) {
+    .contact-grid, .signup-grid {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
 }
 
-.form-field {
-    display: grid;
-    gap: 6px;
-}
 
 .form-label {
     font-weight: 600;
