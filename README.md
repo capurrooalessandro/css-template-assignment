@@ -6,6 +6,16 @@ The main goal of this project was to create a 3–5 page webpage using semantic 
 ## Theme of the webpage
 The webpage also needed a theme, and we chose to design it around a fictional company whose objective is to solve the problem of collaborating across different time zones, thereby removing geographic restrictions.
 
+## Main collaborators:
+
+- Nyeleti Sithole - Developer
+- Capurro Alessandro - Developer
+
+## Languages used:
+
+- HTML5 (for structure and mark-up of the pages)
+- CSS3 (for customizing the style and layout of the pages)
+
 ## Live preview
 
 Live preview link: https://capurrooalessandro.github.io/css-template-assignment/
