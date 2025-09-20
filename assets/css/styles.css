@@ -342,8 +342,9 @@ header {
     }
 
     .hero-img {
-        width: 100%;
+        width: 70vw;
         height: auto;
+        margin: auto;
     }
 }
 
