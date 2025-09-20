@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A description.">
-    <!--link tags containing fontawesome stylesheets for icons and our custom styles.css file-->
+    <meta name="description"
+        content="If you have any questions or just want to contact us, feel free to leave a message on the form." />
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="../assets/vendor/fontawesome/css/solid.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
@@ -14,25 +14,20 @@
 
 <body>
     <header>
-        <!--Header section containing the Navigation bar and burger mode-->
         <div class="container header-inner">
             <div class="header-logo">
                 SyncFlow   
             </div>
-            <!--Burger mode code (checkbox hidden through CSS)-->
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"
                 aria-controls="primary-navigation">
             <label for="nav-toggle" class="burger">
-                <!--sr-only is for screen readers only for accessibility purposes-->
                 <span class="sr-only">Menu</span>
                 <i class="fa-solid fa-bars icon icon--open" aria-hidden="true"></i>
                 <i class="fa-solid fa-xmark icon icon--close" aria-hidden="true"></i>
-            </label>
-            <!--Navbar start (aria-label is used for screen readers to specify that this is the main navbar)-->    
+            </label>   
             <nav class="navbar" id="primary-navigation" aria-label="Primary">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <!--aria-current is used also to highlight the active page in CSS-->
                         <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
@@ -47,11 +42,9 @@
                 </ul>
             </nav>
         </div>
-        <!--End of navbar-->
     </header>
 
     <main>
-        <!-- Page heading for this section (keep the site h1 in header) -->
         <section class="contact" aria-labelledby="contact-title">
             <div class="container contact-inner">
                 <section class="contact-block">
@@ -62,7 +55,6 @@
                 </section>
     
                 <div class="contact-grid">
-                    <!-- Contact form -->
                     <section class="contact-card contact-form" aria-labelledby="form-title">
                         <h3 id="form-title" class="sr-only">Send a message</h3>
                         <form action="#" method="post">
@@ -105,7 +97,6 @@
                         </form>
                     </section>
     
-                    <!-- Contact information -->
                     <aside class="contact-card contact-info" aria-labelledby="info-title">
                         <h3 id="info-title" class="sr-only">Contact details</h3>
     
@@ -146,7 +137,6 @@
     </main>
 
     <footer>
-        <!--Start of footer section (also containing a navigation bar for SEO and accessibility)-->
         <div class="container footer-inner">
             <nav class="footer-nav" aria-label="Footer">
                 <ul class="nav-list footer-list">
@@ -162,7 +152,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contacts.html" aria-current="page">Contact</a>
                     </li>
-                    <!-- add any utility links here: Privacy, Terms, Sitemap, etc. -->
                 </ul>
             </nav>
 
