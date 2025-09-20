@@ -2,37 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A description.">
-    <!--link tags containing fontawesome stylesheets for icons and our custom styles.css file-->
-    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
-    <title>Home (CSS Responsive Template)</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A description." />
+    <!-- Font Awesome + site CSS -->
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="./assets/vendor/fontawesome/css/solid.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <title>Home | SyncFlow</title>
 </head>
 
 <body>
     <header>
-        <!--Header section containing the Navigation bar and burger mode-->
+        <!-- Header: logo + primary nav -->
         <div class="container header-inner">
-            <div class="header-logo">
-                SyncFlow
-            </div>
-            <!--Burger mode code (checkbox hidden through CSS)-->
+            <div class="header-logo">SyncFlow</div>
+
+            <!-- Burger (checkbox hack; visually hidden input) -->
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"
-                aria-controls="primary-navigation">
+                aria-controls="primary-navigation" />
             <label for="nav-toggle" class="burger">
-                <!--sr-only is for screen readers only for accessibility purposes-->
                 <span class="sr-only">Menu</span>
                 <i class="fa-solid fa-bars icon icon--open" aria-hidden="true"></i>
                 <i class="fa-solid fa-xmark icon icon--close" aria-hidden="true"></i>
             </label>
-            <!--Navbar start (aria-label is used for screen readers to specify that this is the main navbar)-->    
+
             <nav class="navbar" id="primary-navigation" aria-label="Primary">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <!--aria-current is used also to highlight the active page in CSS-->
                         <a class="nav-link" href="./index.html" aria-current="page">Home</a>
                     </li>
                     <li class="nav-item">
@@ -47,117 +44,102 @@
                 </ul>
             </nav>
         </div>
-        <!--End of navbar-->
     </header>
 
     <main>
-        <!--hero section-->
+        <!-- hero section -->
         <section class="hero-section">
-
             <div class="container hero-inner">
                 <div class="hero-copy">
-                    <h2 class="hero-title">Effortless collaboration for creative teams.</h2>
+                    <!-- Make the hero the page H1 (semantic) -->
+                    <h1 class="hero-title">Effortless collaboration for creative teams.</h1>
                     <p class="hero-text">
-                        SyncFlow is an all-in-one visual collaboration platform that helps your remote team brainstorm, plan, 
-                        and create in perfect sync—no matter the distance.
+                        SyncFlow is an all-in-one visual collaboration platform that helps your 
+                        remote team brainstorm, plan, and create in perfect sync-no matter the distance.
                     </p>
                     <a class="btn btn-primary" href="./pages/sign-up.html">Sign up</a>
                 </div>
 
-                <figure class="hero-image">
-                    <img src="./assets/images/hero-home.png" alt="Team members collaborating on futuristic digital interfaces.">
+                <figure class="hero-media">
+                    <img src="./assets/images/hero-home.png"
+                        alt="Team members collaborating on futuristic digital interfaces." class="hero-img" loading="eager">
                 </figure>
             </div>
-
         </section>
 
-        <!--random information section-->
+        <!-- features / info section -->
         <section class="info-section">
             <h2>Features designed for flow.</h2>
 
             <div class="container info-inner">
+                <figure class="info-card">
+                    <img src="./assets/images/visual-whiteboard.png" loading="eager" alt="Visual Whiteboard." class="framed-160">
+                    <figcaption class="info-text">
+                        Brainstorm, wireframe, and design together in real-time on a shared visual space that expands
+                        with your ideas.
+                    </figcaption>
+                </figure>
 
-                <div class="info-item">
-                    <figure class="info-box">
-                        <img src="./assets/images/visual-whiteboard.png" alt="Visual Whiteboard.">
-                    </figure>
-                    <p class="info-text">
-                        Brainstorm, wireframe, and design together in real-time 
-                        on a shared visual space that expands with your ideas.
-                    </p>
-                </div>
-        
-                <div class="info-item">
-                    <figure class="info-box">
-                        <img src="./assets/images/video-huddles.png" alt="Visual video.">
-                    </figure>
-                    <p class="info-text">
-                        Replace endless meetings with quick, recordable video updates 
-                        and screen shares that keep projects moving across time zones
-                    </p>
-                </div>
-        
-                <div class="info-item">
-                    <figure class="info-box">
-                        <img src="./assets/images/visual-timelines.png" alt="Visual Timelines.">
-                    </figure>
-                    <p class="info-text">
-                        Track project progress from concept to completion with intuitive, 
-                        drag-and-drop timelines that everyone on the team can understand.
-                    </p>
-                </div>
-        
-                <div class="info-item">
-                    <figure class="info-box">
-                        <img src="./assets/images/ai-assistant.png" alt="AI Assistant.">
-                    </figure>
-                    <p class="info-text">
-                        Automate meeting summaries, generate tasks from discussions, 
-                        and stay organized with an assistant that handles the busywork.
-                    </p>
-                </div>
-                
-            </div>
-        </section>
+                <figure class="info-card">
+                    <img src="./assets/images/video-huddles.png" loading="eager" alt="Visual video." class="framed-160">
+                    <figcaption class="info-text">
+                        Replace endless meetings with quick, recordable video updates and screen shares that keep
+                        projects moving across time zones.
+                    </figcaption>
+                </figure>
 
-        <section class="quote" aria-labelledby="quote-title">
-            <!-- hidden h2 for accessibility purposes -->
-            <h2 id="quote-title" class="sr-only">Testimonial</h2>
-            <div class="container quote-inner">
-                <figure class="quote-figure">
-                    <blockquote class="quote-text">
-                        <p>
-                            “SyncFlow has completely changed how our design team collaborates across three continents. The infinite canvas is a game-changer, 
-                            and we're spending less time in meetings and more time creating. 
-                            It's the first tool that feels like it was actually built for us.”
-                        </p>
-                    </blockquote>
-                    <figcaption class="quote-author">
-                        - Elena Varela, Creative Director at Nomad Studio
+                <figure class="info-card">
+                    <img src="./assets/images/visual-timelines.png" loading="eager" alt="Visual Timelines." class="framed-160">
+                    <figcaption class="info-text">
+                        Track project progress from concept to completion with intuitive, drag-and-drop timelines
+                        everyone can follow.
+                    </figcaption>
+                </figure>
+
+                <figure class="info-card">
+                    <img src="./assets/images/ai-assistant.png" loading="eager" alt="AI Assistant." class="framed-160">
+                    <figcaption class="info-text">
+                        Automate meeting summaries, generate tasks from discussions, and stay organized with an
+                        assistant that handles the busywork.
                     </figcaption>
                 </figure>
             </div>
         </section>
 
-        <!-- Full-width CTA band with inner container -->
+        <!-- quote/testimonial -->
+        <section class="quote" aria-labelledby="quote-title">
+            <h2 id="quote-title" class="sr-only">Testimonial</h2>
+            <div class="container quote-inner">
+                <figure class="quote-figure">
+                    <blockquote class="quote-text">
+                        <p>
+                            “SyncFlow has completely changed how our design team collaborates across three continents.
+                            The infinite canvas is a game-changer, and we're spending less time in meetings and more
+                            time creating.
+                            It's the first tool that feels like it was actually built for us.”
+                        </p>
+                    </blockquote>
+                    <figcaption class="quote-author">- Elena Varela, Creative Director at Nomad Studio</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- CTA -->
         <section class="cta" aria-labelledby="cta-title">
             <div class="container cta-inner">
                 <div class="cta-copy">
                     <h2 id="cta-title" class="cta-title">Ready to transform your teamwork?</h2>
-                    <p class="cta-text">
-                        See how SyncFlow can bring your creative projects to life.
-                    </p>
+                    <p class="cta-text">See how SyncFlow can bring your creative projects to life.</p>
                 </div>
                 <div class="cta-actions">
                     <a class="btn btn-outline-primary" href="./pages/sign-up.html">Sign up</a>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
-        <!--Start of footer section (also containing a navigation bar for SEO and accessibility)-->
+        <!-- Footer nav + legal -->
         <div class="container footer-inner">
             <nav class="footer-nav" aria-label="Footer">
                 <ul class="nav-list footer-list">
@@ -177,8 +159,7 @@
             </nav>
 
             <p class="legal">
-                Copyright
-                &copy; 
+                Copyright &copy; 
                 <time datetime="2025">2025</time> 
                 Capurro Alessandro/Nyeleti Sithole. All rights reserved.
             </p>

@@ -2,37 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A description.">
-    <!--link tags containing fontawesome stylesheets for icons and our custom styles.css file-->
-    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/solid.min.css">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <title>About Us (CSS Responsive Template)</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A description." />
+    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/solid.min.css" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <title>About Us | SyncFlow</title>
 </head>
 
 <body>
     <header>
-        <!--Header section containing the Navigation bar and burger mode-->
         <div class="container header-inner">
-            <div class="header-logo">
-                SyncFlow   
-            </div>
-            <!--Burger mode code (checkbox hidden through CSS)-->
+            <div class="header-logo">SyncFlow</div>
+
             <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"
-                aria-controls="primary-navigation">
+                aria-controls="primary-navigation" />
             <label for="nav-toggle" class="burger">
-                <!--sr-only is for screen readers only for accessibility purposes-->
                 <span class="sr-only">Menu</span>
                 <i class="fa-solid fa-bars icon icon--open" aria-hidden="true"></i>
                 <i class="fa-solid fa-xmark icon icon--close" aria-hidden="true"></i>
             </label>
-            <!--Navbar start (aria-label is used for screen readers to specify that this is the main navbar)-->    
+
             <nav class="navbar" id="primary-navigation" aria-label="Primary">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <!--aria-current is used also to highlight the active page in CSS-->
                         <a class="nav-link" href="../index.html">Home</a>
                     </li>
                     <li class="nav-item">
@@ -47,166 +41,188 @@
                 </ul>
             </nav>
         </div>
-        <!--End of navbar-->
     </header>
 
     <main>
-        <!--about section-->
+        <!-- About hero -->
         <section class="about-hero">
-            <div class="container about"> 
+            <div class="container">
                 <h1>Great ideas happen anywhere. We help you bring them together.</h1>
-                <p>SyncFlow was founded on a simple belief: the best teams shouldn't be limited by geography. 
-                    We build intuitive, beautiful tools that make remote collaboration feel as natural as being in the same room.</p>
+                <p>
+                    SyncFlow was founded on a simple belief: the best teams shouldn't be limited by geography.
+                    We build intuitive, beautiful tools that make remote collaboration feel as natural as being in the
+                    same room.
+                </p>
             </div>
         </section>
 
-        <!--origin section-->
+        <!-- Origin story -->
         <section class="origin-story">
             <div class="container origin">
                 <div class="story-text">
                     <h2>Our Story</h2>
-                    <p>It all started with a frustrating project. Our co-founders, Nyeleti, a UX designer from South Africa, and Alessandro, a developer from Italy, were trying to collaborate on a complex app build.
-                         Juggling endless video calls, messy email threads, and tools that just weren't built for creative feedback, they knew there had to be a better way. 
-                        They decided to build a simple internal tool to solve their own problem: a shared visual space that was fast, intuitive, and put the work front and centre.</p>
-                    <p>That simple tool quickly became indispensable to their workflow. They soon realized they weren't the only ones facing these challenges. 
-                        After sharing a beta version with other remote creatives and receiving overwhelmingly positive feedback, they knew they had something special. 
-                        In 2022, they officially founded SyncFlow, 
-                        a remote-first company dedicated to helping creative teams around the world do their best work, together.</p>
+                    <p>
+                        It all started with a frustrating project. Our co-founders, Nyeleti, a UX designer from South
+                        Africa, and Alessandro, a developer from Italy, were trying to collaborate on a complex app
+                        build. Juggling endless video calls, messy email threads, and tools that just weren't built for
+                        creative feedback, they knew there had to be a better way. They decided to build a simple
+                        internal tool to solve their own problem: a shared visual space that was fast, intuitive, and
+                        put the work front and centre.
+                    </p>
+                    <p>
+                        That simple tool quickly became indispensable to their workflow. They soon realized they weren't
+                        the only ones facing these challenges. After sharing a beta version with other remote creatives
+                        and receiving overwhelmingly positive feedback, they knew they had something special. In 2022,
+                        they officially founded SyncFlow, a remote-first company dedicated to helping creative teams
+                        around the world do their best work, together.
+                    </p>
                 </div>
-                <figure class="story-image">
-                    <img src="../assets/images/hero-origin.jpg" alt="Founders story image.">
+
+                <figure class="story-image" aria-label="Founders story image">
+                    <img src="../assets/images/hero-origin.jpg"
+                        alt="Founders collaborating during the early days of SyncFlow." class="img-fluid framed" 
+                        loading="eager">
                 </figure>
             </div>
         </section>
 
-        <!--services section-->
+        <!-- What we do -->
         <section class="services-section">
-            <h2>What We Do</h2> 
+            <h2>What We Do</h2>
             <div class="container services-inner">
-                
-                <div class="service-item">
-                    <h3>Real-time Visual Whiteboarding</h3>
-                    <figure class="service-box">
-                        <img src="../assets/images/visual-whiteboard.png" width="200px" alt="Visual Whiteboard">
-                    </figure>
+
+                <figure class="service-item">
+                    <figcaption>
+                        <h3>Real-time Visual Whiteboarding</h3>
+                    </figcaption>
+                    <img src="../assets/images/visual-whiteboard.png" loading="lazy" alt="Visual Whiteboard" class="framed-160">
                     <p class="service-text">
-                        Brainstorm ideas, map out user flows, or give design feedback 
-                        on an infinite canvas that updates instantly for everyone.
+                        Brainstorm ideas, map out user flows, or give design feedback on an infinite
+                        canvas that updates instantly for everyone.
                     </p>
-                </div>
-        
-                <div class="service-item">
-                    <h3>Asynchronous Video Updates</h3>
-                    <figure class="service-box">
-                        <img src="../assets/images/video-huddles.png" alt="Video Huddles">
-                    </figure>
+                </figure>
+
+                <figure class="service-item">
+                    <figcaption>
+                        <h3>Asynchronous Video Updates</h3>
+                    </figcaption>
+                    <img src="../assets/images/video-huddles.png" loading="lazy" alt="Video Huddles" class="framed-160">
                     <p class="service-text">
-                        Ditch unnecessary meetings. Record quick video updates 
-                        with screen sharing to keep projects moving across time zones.
+                        Ditch unnecessary meetings. Record quick video updates with screen sharing
+                        to keep projects moving across time zones.
                     </p>
-                </div>
-        
-                <div class="service-item">
-                    <h3>AI-Powered Workflow Automation</h3>
-                    <figure class="service-box">
-                        <img src="../assets/images/ai-assistant.png" alt="AI Assistant">
-                    </figure>
+                </figure>
+
+                <figure class="service-item">
+                    <figcaption>
+                        <h3>AI-Powered Workflow Automation</h3>
+                    </figcaption>
+                    <img src="../assets/images/ai-assistant.png" loading="lazy" alt="AI Assistant" class="framed-160">
                     <p class="service-text">
-                        Let our smart assistant handle the busywork. Automatically 
-                        generate summaries, assign tasks, and keep your projects organized.
+                        Let our smart assistant handle the busywork. Automatically generate
+                        summaries, assign tasks, and keep your projects organized.
                     </p>
-                </div>
-               
-               
+                </figure>
+
             </div>
         </section>
 
-        <!--values section-->
+        <!-- Values -->
         <section class="values-section">
-            <h2>Our Values</h2> 
+            <h2>Our Values</h2>
             <div class="container values-inner">
-                <div class="value-item">
-                    <h3>Clarity</h3>
-                    <figure class="icon-placeholder">
-                        <img src="../assets/images/value-clarity.png" alt="Clarity Value">
-                    </figure>
-                    <p>We believe in radical transparency and communication, 
-                        ensuring everyone is on the same page, always.</p>
-                </div>
-                <div class="value-item">
-                    <h3>Flexibility</h3>
-                    <figure class="icon-placeholder">
-                        <img src="../assets/images/value-flexibility.png" alt="Flexibility Value">
-                    </figure>
-                    <p>We trust our team and our users. We know that great 
-                        work happens anywhere, anytime, and our tools reflect that.</p>
-                </div>
-                <div class="value-item">
-                    <h3>Design-Driven</h3>
-                    <figure class="icon-placeholder">
-                        <img src="../assets/images/value-design.png" alt="Design Value">
-                    </figure>
-                    <p>We are passionate about creating tools that are 
-                        not only powerful and functional but also a joy to use.</p>
-                </div>
+
+                <figure class="value-item">
+                    <img src="../assets/images/value-clarity.png" loading="lazy" alt="Clarity" class="framed-160">
+                    <figcaption>
+                        <h3>Clarity</h3>
+                        <p>
+                            We believe in radical transparency and communication, ensuring everyone is on the same page,
+                            always.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="value-item">
+                    <img src="../assets/images/value-flexibility.png" loading="lazy" alt="Flexibility" class="framed-160">
+                    <figcaption>
+                        <h3>Flexibility</h3>
+                        <p>
+                            We trust our team and our users. We know that great work happens anywhere, anytime, and our
+                            tools reflect that.
+                        </p>
+                    </figcaption>
+                </figure>
+
+                <figure class="value-item">
+                    <img src="../assets/images/value-design.png" loading="lazy" alt="Design-Driven" class="framed-160">
+                    <figcaption>
+                        <h3>Design-Driven</h3>
+                        <p>
+                            We are passionate about creating tools that are not only powerful and functional but also a
+                            joy to use.
+                        </p>
+                    </figcaption>
+                </figure>
+
             </div>
         </section>
 
-        <!--team section-->
+        <!-- Team -->
         <section class="team-section">
             <h2>Meet the Team</h2>
             <div class="container team-inner">
-                <div class="team-member">
-                    <h3>Capurro Alessandro</h3>
-                    <figure class="team-photo-placeholder">
-                        <img src="../assets/images/team-male.png" alt="Capurro Alessandro">
-                        <figcaption>Co-Founder & Head of Product</figcaption>
-                    </figure>
-                </div>
-                <div class="team-member">
-                    <h3>Nyeleti Sithole</h3>
-                    <figure class="team-photo-placeholder">
-                        <img src="../assets/images/team-male.png" alt="Nyeleti Sithole">
-                        <figcaption>Co-Founder & Lead Engineer</figcaption>
-                    </figure>
-                </div>
-                <div class="team-member">
-                    <h3>Kenji Tanaka</h3>
-                    <figure class="team-photo-placeholder">
-                        <img src="../assets/images/team-female.png" alt="Kenji Tanaka">
-                    <figcaption>Senior Software Engineer</figcaption>
-                    </figure>
-                </div>
-                <div class="team-member">
-                    <h3>Sofia Reyes</h3>
-                    <figure class="team-photo-placeholder">
-                        <img src="../assets/images/team-female.png" alt="Sofia Reyes">
-                        <figcaption>Community Manager</figcaption>
-                    </figure>
-                </div>
+
+                <figure class="team-member">
+                    <img src="../assets/images/team-male.png" loading="lazy" alt="Capurro Alessandro" class="framed-160">
+                    <figcaption>
+                        <h3>Capurro Alessandro</h3>
+                        <p>Co-Founder &amp; Head of Product</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="team-member">
+                    <img src="../assets/images/team-male.png" loading="lazy" alt="Nyeleti Sithole" class="framed-160">
+                    <figcaption>
+                        <h3>Nyeleti Sithole</h3>
+                        <p>Co-Founder &amp; Lead Engineer</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="team-member">
+                    <img src="../assets/images/team-female.png" loading="lazy" alt="Kenji Tanaka" class="framed-160">
+                    <figcaption>
+                        <h3>Kenji Tanaka</h3>
+                        <p>Senior Software Engineer</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="team-member">
+                    <img src="../assets/images/team-female.png" loading="lazy" alt="Sofia Reyes" class="framed-160">
+                    <figcaption>
+                        <h3>Sofia Reyes</h3>
+                        <p>Community Manager</p>
+                    </figcaption>
+                </figure>
+
             </div>
         </section>
-       
 
-        <!-- Full-width CTA band with inner container -->
+        <!-- CTA -->
         <section class="cta" aria-labelledby="cta-title">
             <div class="container cta-inner">
                 <div class="cta-copy">
                     <h2 id="cta-title" class="cta-title">Ready to transform your teamwork?</h2>
-                    <p class="cta-text">
-                        See how SyncFlow can bring your creative projects to life.
-                    </p>
+                    <p class="cta-text">See how SyncFlow can bring your creative projects to life.</p>
                 </div>
                 <div class="cta-actions">
                     <a class="btn btn-outline-primary" href="./sign-up.html">Sign up</a>
                 </div>
             </div>
         </section>
-
     </main>
 
     <footer>
-        <!--Start of footer section (also containing a navigation bar for SEO and accessibility)-->
         <div class="container footer-inner">
             <nav class="footer-nav" aria-label="Footer">
                 <ul class="nav-list footer-list">
@@ -222,13 +238,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./contacts.html">Contact</a>
                     </li>
-                    <!-- add any utility links here: Privacy, Terms, Sitemap, etc. -->
                 </ul>
             </nav>
 
             <p class="legal">
-                Copyright
-                &copy; 
+                Copyright &copy; 
                 <time datetime="2025">2025</time> 
                 Capurro Alessandro/Nyeleti Sithole. All rights reserved.
             </p>
