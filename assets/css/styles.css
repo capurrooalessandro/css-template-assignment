@@ -788,7 +788,7 @@ footer {
     ─────────────────────────────────────────────────────────
                     Forms (Contact + Sign up)
     ───────────────────────────────────────────────────────── 
-   */
+*/
 .contact, .signup {
     padding-block: 32px;
     min-height: 100vh;
@@ -814,50 +814,87 @@ footer {
     color: var(--text-muted);
 }
 
-.contact-grid, .signup-grid{
-    display: flex;
+/* ------------------------
+   Inline-flex grid layout
+   ------------------------ */
+.signup-grid {
+    display: inline-flex;
     gap: 20px;
-    align-items: center;
     justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.signup-benefits {
-    list-style-type: none;
+.col--left, .col--right {
+    display: inline-flex;
+    /* each column is its own vertical flex stack */
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    /* space between cards in a column */
+    flex: 1 1 520px;
+    /* grow, shrink, preferred width */
+    max-width: 560px;
+    /* cap the column width */
+    min-width: 320px;
+    /* avoid too-narrow columns on large screens */
 }
 
+/* Cards (benefits, signup form, contact form, contact info) */
 .contact-card {
-    display: flex;
     background: var(--text-light);
     border: 1px solid var(--text-muted);
     border-radius: 8px;
-    flex-direction: column;
     padding: clamp(16px, 3vw, 24px);
     width: 100%;
-    align-self: baseline;
+    transition: filter .18s ease, opacity .18s ease;
+    margin: 0;
 }
 
-/* Fields */
+/* -------- Forms -------- */
 .form-row {
+    display: flex;
+    flex-direction: row;
     gap: 16px;
-    width: 100%;
     margin-bottom: 16px;
 }
 
 .form-field {
     display: flex;
     flex-direction: column;
-    gap: 16px;
-    margin-bottom: 16px;
+    gap: 6px;
 }
 
-@media (max-width:991px) {
-    .contact-grid, .signup-grid {
-        display: flex;
+@media (max-width: 1138px) {
+    /* one single vertical stack */
+    .signup-grid {
         flex-direction: column;
-        flex-wrap: nowrap;
+        align-items: stretch;
+        gap: 20px;
+    }
+
+    .col--left, .col--right {
+        max-width: none;
+        min-width: 0;
+        width: 100%;
+    }
+
+    /* cards should fill container width */
+    .contact-card {
+        max-width: none;
+        width: 100%;
+    }
+
+    /* form fields go single column */
+    .form-row {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
     }
 }
-
 
 .form-label {
     font-weight: 600;
@@ -942,4 +979,44 @@ textarea {
 
 .contact-hours li:last-child {
     border-bottom: none;
+}
+
+@media (min-width: 1138px) {
+    /* ---------- Shared blur/unblur effect for both pairs ---------- */
+    /* Smooth visual treatment for all cards (does nothing by itself) */
+    .contact-card {
+        transition: filter .18s ease, opacity .18s ease;
+    }
+
+    /* ========== CONTACT pair: (.contact-form + .contact-info) ========== */
+
+    /* When either contact-form OR contact-info is hovered/focused,
+   blur everything inside the grid... */
+    .signup-grid:has(.contact-form:is(:hover, :focus-within), .contact-info:is(:hover, :focus-within)) .contact-card {
+        filter: blur(2px);
+        opacity: .6;
+    }
+
+    /* ...except the two cards in the CONTACT pair */
+    .signup-grid:has(.contact-form:is(:hover, :focus-within), .contact-info:is(:hover, :focus-within)) .contact-form,
+    .signup-grid:has(.contact-form:is(:hover, :focus-within), .contact-info:is(:hover, :focus-within)) .contact-info {
+        filter: none;
+        opacity: 1;
+    }
+
+    /* ========== SIGNUP pair: (.signup-aside + [aria-labelledby="signup-form-title"]) ========== */
+
+    /* When either the benefits card OR the signup form is hovered/focused,
+    blur everything inside the grid... */
+    .signup-grid:has(.signup-aside:is(:hover, :focus-within), [aria-labelledby="signup-form-title"]:is(:hover, :focus-within)) .contact-card {
+        filter: blur(2px);
+        opacity: .6;
+    }
+
+    /* ...except the two cards in the SIGNUP pair */
+    .signup-grid:has(.signup-aside:is(:hover, :focus-within), [aria-labelledby="signup-form-title"]:is(:hover, :focus-within)) .signup-aside,
+    .signup-grid:has(.signup-aside:is(:hover, :focus-within), [aria-labelledby="signup-form-title"]:is(:hover, :focus-within)) [aria-labelledby="signup-form-title"] {
+        filter: none;
+        opacity: 1;
+    }
 }
