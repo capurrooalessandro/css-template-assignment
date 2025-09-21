@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="If you have any questions or just want to contact us, feel free to leave a message on the form." />
+    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../assets/vendor/fontawesome/css/solid.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Get Started | SyncFlow</title>
+</head>
+
+<body>
+    <header>
+        <div class="container header-inner">
+            <div class="header-logo">SyncFlow</div>
+
+            <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation"
+                aria-controls="primary-navigation">
+            <label for="nav-toggle" class="burger">
+                <span class="sr-only">Menu</span>
+                <i class="fa-solid fa-bars icon icon--open" aria-hidden="true"></i>
+                <i class="fa-solid fa-xmark icon icon--close" aria-hidden="true"></i>
+            </label>
+
+            <nav class="navbar" id="primary-navigation" aria-label="Primary">
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about-us.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./get-started.html" aria-current="page">Get started</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="contact" aria-labelledby="contact-title">
+            <div class="container contact-inner">
+    
+                <!-- header band (kept as .contact-block; CSS below accounts for it) -->
+                <section class="contact-block">
+                    <h1 id="contact-title" class="contact-title">Get started</h1>
+                    <p class="contact-intro">
+                        We’d love to hear from you! Use the form to send us a message,
+                        or sign up below to start collaborating with SyncFlow.
+                    </p>
+                </section>
+    
+                <!-- unified grid -->
+                <div class="signup-grid">
+                    <div class="col col--left">
+                        <!-- Contact form (top-right on desktop) -->
+                        <section class="contact-card contact-form" aria-labelledby="form-title">
+                            <h3 id="signup-form-title" class="card-subtitle">Send a message</h3>
+                            <form action="#" method="post">
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="contact-name" class="form-label">Full name</label>
+                                        <input class="form-control" type="text" id="contact-name" name="name"
+                                            autocomplete="name" required placeholder="John Doe">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="contact-email" class="form-label">Email</label>
+                                        <input class="form-control" type="email" id="contact-email" name="email"
+                                            autocomplete="email" required placeholder="hello@example.com">
+                                    </div>
+                                </div>
+    
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input class="form-control" type="text" id="subject" name="subject" required
+                                            placeholder="Example: How can I join your company?">
+                                    </div>
+                                    <div class="form-field">
+                                        <label for="contact-phone" class="form-label">Phone (optional)</label>
+                                        <input class="form-control" type="tel" id="contact-phone" name="phone"
+                                            inputmode="tel" autocomplete="tel" placeholder="+39 333 123 4567">
+                                    </div>
+                                </div>
+    
+                                <div class="form-field">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="6" required
+                                        placeholder="Insert your own message"></textarea>
+                                </div>
+    
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-outline-primary">Send message</button>
+                                </div>
+                            </form>
+                        </section>
+    
+                        <!-- Benefits (top-left on desktop) -->
+                        <aside class="contact-card signup-aside" aria-labelledby="benefits-title">
+                            <h3 class="card-subtitle">Why sign up?</h3>
+                            <ul class="signup-benefits">
+                                <li><i class="fa-solid fa-circle-check contact-icon" aria-hidden="true"></i> Access
+                                    members-only content</li>
+                                <li><i class="fa-solid fa-circle-check contact-icon" aria-hidden="true"></i> Save your
+                                    preferences</li>
+                                <li><i class="fa-solid fa-circle-check contact-icon" aria-hidden="true"></i> Faster checkout
+                                </li>
+                            </ul>
+                        </aside>
+                    </div>
+    
+                    <div class="col col--right">
+                        <!-- Contact info (below contact form on desktop) -->
+                        <aside class="contact-card contact-info" aria-labelledby="info-title">
+                            <h3 class="card-subtitle">Contact details</h3>
+                            <address>
+                                <p class="contact-item">
+                                    <i class="fa-solid fa-location-dot contact-icon" aria-hidden="true"></i>
+                                    Via Esempio 123, 00100 Roma, Italia
+                                </p>
+                                <p class="contact-item">
+                                    <i class="fa-solid fa-envelope contact-icon" aria-hidden="true"></i>
+                                    <a href="mailto:hello@example.com">hello@example.com</a>
+                                </p>
+                                <p class="contact-item">
+                                    <i class="fa-solid fa-phone contact-icon" aria-hidden="true"></i>
+                                    <a href="tel:+393331234567">+39 333 123 4567</a>
+                                </p>
+                            </address>
+    
+                            <div>
+                                <h4 class="contact-subtitle">Opening hours</h4>
+                                <ul class="contact-hours">
+                                    <li><span>Mon-Fri</span> <time datetime="09:00">09:00</time> - <time
+                                            datetime="18:00">18:00</time></li>
+                                    <li><span>Sat/Sun</span> Closed</li>
+                                </ul>
+                            </div>
+                        </aside>
+    
+                        <!-- Sign-up form (below benefits on desktop) -->
+                        <section class="contact-card signup-form" aria-labelledby="signup-form-title">
+                            <h3 id="signup-form-title" class="card-subtitle">Sign up form</h3>
+                            <form action="#" method="post" novalidate>
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label class="form-label" for="signup-first-name">First name</label>
+                                        <input class="form-control" id="signup-first-name" name="first_name" type="text"
+                                            autocomplete="given-name" required placeholder="John">
+                                    </div>
+                                    <div class="form-field">
+                                        <label class="form-label" for="signup-last-name">Last name</label>
+                                        <input class="form-control" id="signup-last-name" name="last_name" type="text"
+                                            autocomplete="family-name" required placeholder="Doe">
+                                    </div>
+                                </div>
+    
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label class="form-label" for="signup-email">Email</label>
+                                        <input class="form-control" id="signup-email" name="email" type="email"
+                                            autocomplete="email" required placeholder="hello@example.com">
+                                    </div>
+                                    <div class="form-field">
+                                        <label class="form-label" for="signup-phone">Phone (optional)</label>
+                                        <input class="form-control" id="signup-phone" name="phone" type="tel"
+                                            autocomplete="tel" placeholder="+39 333 123 4567">
+                                    </div>
+                                </div>
+    
+                                <div class="form-row">
+                                    <div class="form-field">
+                                        <label class="form-label" for="signup-password">Password</label>
+                                        <input class="form-control" id="signup-password" name="password" type="password"
+                                            autocomplete="new-password" minlength="8" required>
+                                    </div>
+                                    <div class="form-field">
+                                        <label class="form-label" for="signup-confirm-password">Confirm password</label>
+                                        <input class="form-control" id="signup-confirm-password" name="confirm_password"
+                                            type="password" autocomplete="new-password" minlength="8" required>
+                                    </div>
+                                </div>
+    
+                                <div class="form-field">
+                                    <label class="checkbox">
+                                        <input type="checkbox" name="terms" required>
+                                        <span>I agree to the <a href="#" class="inline-link">Terms</a> and <a href="#"
+                                                class="inline-link">Privacy Policy</a>.</span>
+                                    </label>
+                                </div>
+    
+                                <div class="form-actions">
+                                    <button class="btn btn-primary" type="submit">Create account</button>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <nav class="footer-nav" aria-label="Footer">
+                <ul class="nav-list footer-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./about-us.html">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./get-started.html" aria-current="page">Get started</a>
+                    </li>
+                </ul>
+            </nav>
+            <p class="legal">Copyright &copy; <time datetime="2025">2025</time> Capurro Alessandro/Nyeleti Sithole. All
+                rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
