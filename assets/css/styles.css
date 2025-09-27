@@ -650,55 +650,47 @@ footer {
     }
 }
 
-/* ================================
-   Shared section headings
-   (Services / Values / Team)
-   ================================ */
-.services-section h2, .values-section h2, .team-section h2 {
-    font-size: clamp(28px, 5vw + 1rem, 75px);
-    line-height: 1.1;
-    margin: 0 0 50px 0;
-    text-align: center;
-    color: var(--bg-dark);
-    font-weight: 900;
-}
 
 /* ================================
    Services
    Desktop: flex row (wrap)
    Mobile: flex column (1 column)
    ================================ */
-.services-section, .team-section {
-    padding-block: 75px;
-    background: var(--text-muted);
-    text-align: center;
+.services-section {
+    padding: 100px 0;
+    background-color: var(--text-muted) 
 }
 
-/* desktop layout: flex */
-.services-inner, .team-inner {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    gap: 40px;
-    flex-wrap: wrap;
+.services-inner h2, .values-section h2 {
+    font-size: clamp(22px, 2.2vw + 1rem, 36px);
+    font-weight: 900;
+    color: var(--bg-dark);
+    margin: 0 0 50px 0;
 }
 
 .service-item {
-    width: 300px;
-    padding-block: 40px;
-    text-align: center;
-    border-radius: 8px;
-    margin: 0 auto 20px;
-    /* keep children from overflowing */
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 80px;
+    margin-bottom: 80px;
 }
 
-.service-item h3 {
+.service-item.alt {
+    flex-direction: row-reverse;
+}
+
+.service-icon {
+    flex-shrink: 0;
+    width: clamp(80px, 12vw, 120px);
+    height: clamp(80px, 12vw, 120px);
+    background-color: #3882F6;
+    border-radius: 50%;
+}
+
+.service-text h3 {
+    font-size: 24px;
     color: var(--bg-dark);
-    margin: 0 0 10px 0;
+    margin-top: 0;
 }
 
 .service-text {
@@ -706,12 +698,19 @@ footer {
     margin: 0 auto;
 }
 
-
 /* ================================
    Values
    Desktop: flex row (wrap)
    Mobile: flex column (1 column)
    ================================ */
+.value-icon {
+    margin-bottom: 24px; /* Creates space between the icon and the heading */
+}
+
+.value-icon img {
+    width: clamp(60px, 10vw, 120px);
+    height: clamp(60px, 10vw, 120px);
+}
 
 .values-section {
     padding-block: 75px;
@@ -728,28 +727,49 @@ footer {
 }
 
 .value-item {
-    width: 20%;
+    max-width: 700px;
+    margin: 0 auto;
     text-align: center;
 }
 
 .value-item h3 {
+    font-size: 24px;
     color: var(--bg-dark);
-    margin: 0 0 8px 0;
+    margin-top: 0;
 }
+
 
 .value-item p {
     font-size: clamp(13px, 0.85rem + 0.2vw, 14px);
     color: var(--text-infobox);
     line-height: 1.4;
-    text-align: center;
-    word-spacing: 1.3px;
-    margin: 0;
 }
 
 /* ================================
    Team section
    ================================ */
 
+.team-section h2 {
+    font-size: clamp(22px, 2.2vw + 1rem, 36px);
+    font-weight: 900;
+    color: var(--bg-dark);
+    margin: 0 0 50px 0;
+}
+
+.team-section {
+    padding-block: 75px;
+    background: var(--text-muted);
+    text-align: center;
+}
+
+/* desktop layout: flex */
+.team-inner {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 40px;
+    flex-wrap: wrap;
+}
 .team-inner {
     gap: 20px;
 }
