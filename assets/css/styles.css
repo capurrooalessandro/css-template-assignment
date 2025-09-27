@@ -1,40 +1,26 @@
-/* ─── Custom roboto font ───────────────────────────────── */
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
     font-weight: 100 900;
-    /* variable weight range */
     font-style: normal;
     font-display: swap;
-    /* prevent invisible text during load */
 }
 
-/* Use border-box so padding/border don’t expand element size */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* ─── Tokens ───────────────────────────────────────────── */
 :root {
     --bg-dark: #1F2937;
-    /* header/footer background */
     --text-light: #F9FAF8;
-    /* header logo / primary text */
     --text-muted: #E5E7EB;
-    /* nav links / secondary text */
     --accent: #3882F6;
-    /* CTA / accent */
     --keyboard-navigation: #93c5fd;
-    /* focus ring */
     --bg-nav-link: #374151;
-    /* hover/active pill bg */
     --bg-image-placeholder: #6D747D;
-    /* gray placeholder */
     --text-infobox: var(--bg-image-placeholder);
     --container: 72rem;
-    /* ≈1152px */
     --header-height: 68px;
-    /* sticky header height */
 }
 
 html {
@@ -53,7 +39,6 @@ body {
     padding-inline: clamp(16px, 4vw, 32px);
 }
 
-/* ─── Header / Primary nav ─────────────────────────────── */
 header {
     background: var(--bg-dark);
     position: sticky;
@@ -74,7 +59,6 @@ header {
     color: var(--text-light);
 }
 
-/* Nav layout */
 .navbar {
     flex: 1 1 100%;
     margin-top: 8px;
@@ -96,7 +80,6 @@ header {
     padding: 0;
 }
 
-/* Nav links */
 .nav-link {
     display: inline-block;
     padding: 12px 12px;
@@ -135,7 +118,6 @@ header {
     outline-offset: 2px;
 }
 
-/* Burger */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -203,7 +185,6 @@ header {
     display: inline-block;
 }
 
-/* Show/hide nav */
 .navbar {
     display: none;
 }
@@ -222,7 +203,6 @@ header {
     }
 }
 
-/* ─── Buttons ──────────────────────────────────────────── */
 .btn {
     display: inline-block;
     padding: 10px 36px;
@@ -279,7 +259,6 @@ header {
     }
 }
 
-/* ─── Hero ─────────────────────────────────────────────── */
 .hero-section {
     background: var(--bg-dark);
     color: var(--text-light);
@@ -313,7 +292,6 @@ header {
     margin: 0;
 }
 
-/* figure reset */
 .hero-img {
     display: block;
     width: 46ch;
@@ -348,7 +326,6 @@ header {
     }
 }
 
-/* ─── Info / Features ─────────────────────────────────── */
 .info-section {
     padding-block: 75px;
     text-align: center;
@@ -374,7 +351,6 @@ header {
     text-align: center;
 }
 
-/* figure */
 .info-text {
     font-size: clamp(13px, 0.85rem + 0.2vw, 14px);
     color: var(--text-infobox);
@@ -383,7 +359,6 @@ header {
     word-spacing: 1.3px;
 }
 
-/* Border only on images (not wrappers) */
 .framed-160 {
     display: block;
     width: 160px;
@@ -395,7 +370,6 @@ header {
     margin-bottom: 8px;
 }
 
-/* ─── Quote / Testimonial ─────────────────────────────── */
 .quote {
     background: var(--text-muted);
     padding-block: clamp(40px, 8vw, 96px);
@@ -451,7 +425,6 @@ header {
     }
 }
 
-/* ─── CTA ──────────────────────────────────────────────── */
 .cta {
     color: var(--text-light);
     padding-block: clamp(24px, 6vw, 48px);
@@ -513,7 +486,6 @@ header {
     }
 }
 
-/* ─── Footer ───────────────────────────────────────────── */
 footer {
     background: var(--bg-dark);
     color: var(--text-light);
@@ -578,11 +550,6 @@ footer {
     }
 }
 
-/* 
-    ─────────────────────────────────────────────────────────
-                            About Us
-    ───────────────────────────────────────────────────────── 
-   */
 .about-hero {
     background: var(--bg-dark);
     color: var(--text-light);
@@ -650,11 +617,6 @@ footer {
     }
 }
 
-/* ============================================
-   Services (About page)
-   ============================================ */
-
-/* Section wrapper */
 .services-section {
     padding: 65px 0 85px 0;
     background-color: var(--text-muted);
@@ -667,7 +629,6 @@ footer {
     text-align: center;
 }
 
-/* One service row: icon + copy (desktop: row; mobile: stacked) */
 .service-item {
     display: flex;
     align-items: self-end;
@@ -675,22 +636,18 @@ footer {
     margin-bottom: clamp(28px, 6vw, 80px);
 }
 
-/* Alternate layout every other row (image on the right) */
 .service-item.alt {
     flex-direction: row-reverse;
 }
 
-/* Circular icon / image holder */
 .service-icon {
     flex-shrink: 0;
     width: auto;
     height: 120px;
     background-color: var(--accent);
-    /* keep palette */
     border-radius: 50%;
 }
 
-/* Service title */
 .service-text h3 {
     margin: 0 0 8px 0;
     color: var(--bg-dark);
@@ -698,7 +655,6 @@ footer {
     line-height: 1.25;
 }
 
-/* Optional paragraph sizing if you have <p> inside */
 .service-text p {
     margin: 0;
     color: var(--bg-dark);
@@ -706,11 +662,6 @@ footer {
     line-height: 1.6;
 }
 
-/* ============================================
-   Responsive
-   ============================================ */
-
-/* Tablet & down: stack items, center align */
 @media (max-width: 991px) {
     .service-item, .service-item.alt {
         align-items: center;
@@ -726,7 +677,6 @@ footer {
     }
 }
 
-/* Small phones: tighten gaps/margins */
 @media (max-width: 576px) {
     .service-item {
         gap: 20px;
@@ -743,13 +693,8 @@ footer {
     }
 }
 
-/* ================================
-   Values
-   Desktop: flex row (wrap)
-   Mobile: flex column (1 column)
-   ================================ */
 .value-icon {
-    margin-bottom: 24px; /* Creates space between the icon and the heading */
+    margin-bottom: 24px;
 }
 
 .value-icon img {
@@ -762,7 +707,6 @@ footer {
     text-align: center;
 }
 
-/* desktop layout: flex */
 .values-inner {
     display: flex;
     justify-content: center;
@@ -790,10 +734,6 @@ footer {
     line-height: 1.4;
 }
 
-/* ================================
-   Team section
-   ================================ */
-
 .team-section h2 {
     font-size: clamp(22px, 2.2vw + 1rem, 36px);
     font-weight: 900;
@@ -807,7 +747,6 @@ footer {
     text-align: center;
 }
 
-/* desktop layout: flex */
 .team-inner {
     display: flex;
     justify-content: center;
@@ -835,7 +774,6 @@ footer {
     word-spacing: 1.3px;
 }
 
-/* mobile layout: flex column */
 @media (max-width: 1192px) {
     .values-inner, .services-inner, .team-inner {
         display: flex;
@@ -848,11 +786,6 @@ footer {
     }
 }
 
-/* 
-    ─────────────────────────────────────────────────────────
-                    Forms (Contact + Sign up)
-    ───────────────────────────────────────────────────────── 
-*/
 .contact, .signup {
     padding-block: 32px;
     min-height: 100vh;
@@ -878,9 +811,6 @@ footer {
     color: var(--text-muted);
 }
 
-/* ------------------------
-   Inline-flex grid layout
-   ------------------------ */
 .signup-grid {
     display: inline-flex;
     gap: 20px;
@@ -892,20 +822,14 @@ footer {
 
 .col--left, .col--right {
     display: inline-flex;
-    /* each column is its own vertical flex stack */
     flex-direction: column;
     align-items: stretch;
     gap: 20px;
-    /* space between cards in a column */
     flex: 1 1 520px;
-    /* grow, shrink, preferred width */
     max-width: 560px;
-    /* cap the column width */
     min-width: 320px;
-    /* avoid too-narrow columns on large screens */
 }
 
-/* Cards (benefits, signup form, contact form, contact info) */
 .contact-card {
     background: var(--text-light);
     border: 1px solid var(--text-muted);
@@ -916,7 +840,6 @@ footer {
     margin: 0;
 }
 
-/* -------- Forms -------- */
 .form-row {
     display: flex;
     flex-direction: row;
@@ -931,7 +854,6 @@ footer {
 }
 
 @media (max-width: 1138px) {
-    /* one single vertical stack */
     .signup-grid {
         flex-direction: column;
         align-items: stretch;
@@ -943,14 +865,11 @@ footer {
         min-width: 0;
         width: 100%;
     }
-
-    /* cards should fill container width */
     .contact-card {
         max-width: none;
         width: 100%;
     }
 
-    /* form fields go single column */
     .form-row {
         flex-direction: column;
     }
@@ -992,7 +911,6 @@ textarea {
     margin-top: 14px;
 }
 
-/* Contact info bits */
 .contact-block+.contact-block {
     margin-top: 18px;
 }
@@ -1046,38 +964,26 @@ textarea {
 }
 
 @media (min-width: 1138px) {
-    /* ---------- Shared blur/unblur effect for both pairs ---------- */
-    /* Smooth visual treatment for all cards (does nothing by itself) */
     .contact-card {
         transition: filter .18s ease, opacity .18s ease;
     }
 
-    /* ========== CONTACT pair: (.contact-form + .contact-info) ========== */
-
-    /* When either contact-form OR contact-info is hovered/focused,
-   blur everything inside the grid... */
     .signup-grid:has(.contact-form:is(:hover, :focus-within), .contact-info:is(:hover, :focus-within)) .contact-card {
         filter: blur(2px);
         opacity: .6;
     }
 
-    /* ...except the two cards in the CONTACT pair */
     .signup-grid:has(.contact-form:is(:hover, :focus-within), .contact-info:is(:hover, :focus-within)) .contact-form,
     .signup-grid:has(.contact-form:is(:hover, :focus-within), .contact-info:is(:hover, :focus-within)) .contact-info {
         filter: none;
         opacity: 1;
     }
 
-    /* ========== SIGNUP pair: (.signup-aside + [aria-labelledby="signup-form-title"]) ========== */
-
-    /* When either the benefits card OR the signup form is hovered/focused,
-    blur everything inside the grid... */
     .signup-grid:has(.signup-aside:is(:hover, :focus-within), [aria-labelledby="signup-form-title"]:is(:hover, :focus-within)) .contact-card {
         filter: blur(2px);
         opacity: .6;
     }
 
-    /* ...except the two cards in the SIGNUP pair */
     .signup-grid:has(.signup-aside:is(:hover, :focus-within), [aria-labelledby="signup-form-title"]:is(:hover, :focus-within)) .signup-aside,
     .signup-grid:has(.signup-aside:is(:hover, :focus-within), [aria-labelledby="signup-form-title"]:is(:hover, :focus-within)) [aria-labelledby="signup-form-title"] {
         filter: none;
